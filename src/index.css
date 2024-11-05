@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .react-select-container .react-select__control {
+    @apply bg-gray-800 border-gray-700 hover:border-blue-500;
+  }
+
+  .react-select-container .react-select__menu {
+    @apply bg-gray-800 border border-gray-700;
+  }
+
+  .react-select-container .react-select__option {
+    @apply hover:bg-gray-700 cursor-pointer;
+  }
+
+  .react-select-container .react-select__multi-value {
+    @apply bg-blue-500 rounded;
+  }
+
+  .react-select-container .react-select__multi-value__label {
+    @apply text-white;
+  }
+
+  .react-select-container .react-select__multi-value__remove {
+    @apply hover:bg-blue-600 hover:text-white;
+  }
+}
