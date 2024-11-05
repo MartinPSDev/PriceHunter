@@ -2,7 +2,8 @@
 
 **Want to analyze your competitors and improve your business?** This web app is tailor-made for you. You can select the stores you need to extract their prices and save them to your device in a file for later analysis.
 
-[sampler of my project](https://github.com/MartinPSDev/PriceHunter/blob/main/sampler.gif)
+![sampler](https://github.com/user-attachments/assets/479b3d3e-1440-4097-8e7a-e66ca11b93e6)
+
 
 **Technologies**
 
