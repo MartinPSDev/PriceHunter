@@ -2,7 +2,7 @@
 
 **Want to analyze your competitors and improve your business?** This web app is tailor-made for you. You can select the stores you need to extract their prices and save them to your device in a file for later analysis.
 
-[Video Demo](sampler.mp4)
+(sampler.mp4)
 
 **Technologies**
 
