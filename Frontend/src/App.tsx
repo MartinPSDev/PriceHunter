@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Settings, ShoppingCart, Download, Search } from 'lucide-react';
+import { Settings, ShoppingCart, Search } from 'lucide-react';
 import CountrySelector from './components/CountrySelector';
 import StoreSelector from './components/StoreSelector';
 import CategorySelector from './components/CategorySelector';
@@ -15,7 +15,7 @@ function App() {
   const [exportFormat, setExportFormat] = useState('');
 
   const handleStartScraping = async () => {
-    // This will be implemented when we connect to the backend
+    
     console.log('Starting scraping with:', {
       country: selectedCountry,
       stores: selectedStores,

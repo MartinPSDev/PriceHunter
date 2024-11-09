@@ -4,8 +4,13 @@ import App from './App';
 import './index.css';
 import './i18n';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  createRoot(rootElement).render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+} else {
+  console.error("El elemento con ID 'root' no se encontró.");
+}
