@@ -15,7 +15,15 @@ const storesByCountry: Record<string, Array<{ value: string; label: string }>> =
     { value: 'mercadolibre', label: 'Mercado Libre' },
     { value: 'fravega', label: 'Frávega' },
     { value: 'garbarino', label: 'Garbarino' },
-    
+    { value: 'coto', label: 'Coto' }, 
+    { value: 'carrefour', label: 'Carrefour' }, 
+    { value: 'changomas', label: 'Chango Mas' }, 
+    { value: 'disco', label: 'Disco' }, 
+    { value: 'dia', label: 'Día' }, 
+    { value: 'jumbo', label: 'Jumbo' }, 
+    { value: 'musimundo', label: 'Musimundo' }, 
+    { value: 'vea', label: 'Vea' }, 
+    { value: 'walmart', label: 'Walmart' }, 
   ],
   
 };
