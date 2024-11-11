@@ -55,6 +55,8 @@ const StoreSelector: React.FC<StoreSelectorProps> = ({
         options={stores}
         className="react-select-container"
         classNamePrefix="react-select"
+        closeMenuOnSelect={false}
+        hideSelectedOptions={false}
         theme={(theme) => ({
           ...theme,
           colors: {
