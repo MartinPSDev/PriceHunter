@@ -13,15 +13,39 @@ function App() {
   const [selectedStores, setSelectedStores] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [exportFormat, setExportFormat] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleStartScraping = async () => {
-    
-    console.log('Starting scraping with:', {
-      country: selectedCountry,
-      stores: selectedStores,
-      category: selectedCategory,
-      format: exportFormat
-    });
+    setErrorMessage(''); 
+    setSuccessMessage(''); 
+
+    try {
+      const response = await fetch('http://127.0.0.1:8000/api/scraping/scrape', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          query: selectedCategory, 
+          stores: selectedStores,
+          export_format: exportFormat,
+          filename: 'resultado', 
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Error en la solicitud de scraping');
+      }
+
+      const data = await response.json();
+      console.log('Resultados de scraping:', data);
+      setSuccessMessage(`Resultados exportados a ${data.filename}.${data.export_format}`); 
+
+    } catch (error) {
+      console.error('Error al iniciar el scraping:', error);
+      setErrorMessage('Error al iniciar el scraping. Por favor, inténtalo de nuevo.'); 
+    }
   };
 
   return (
@@ -88,6 +112,10 @@ function App() {
                 <span>{t('startScraping')}</span>
               </button>
             )}
+
+            {/* Mensajes de error y éxito */}
+            {errorMessage && <div className="text-red-500">{errorMessage}</div>}
+            {successMessage && <div className="text-green-500">{successMessage}</div>}
           </div>
 
           {/* Features Section */}
