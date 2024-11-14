@@ -23,5 +23,15 @@ def get_stores():
     return [
         {"name": "Mercado Libre", "url": "https://www.mercadolibre.com.ar"},
         {"name": "Amazon", "url": "https://www.amazon.com"},
-        
+        {"name": "Frávega", "url": "https://www.fravega.com"},
+        {"name": "Garbarino", "url": "https://www.garbarino.com"},
+        {"name": "Coto", "url": "https://www.coto.com.ar"},  
+        {"name": "Carrefour", "url": "https://www.carrefour.com.ar"},  
+        {"name": "Chango Mas", "url": "https://www.changomas.com.ar"},  
+        {"name": "Disco", "url": "https://www.disco.com.ar"},  
+        {"name": "Día", "url": "https://www.diaonline.com.ar/"},  
+        {"name": "Jumbo", "url": "https://www.jumbo.com.ar"},  
+        {"name": "Musimundo", "url": "https://www.musimundo.com"},  
+        {"name": "Vea", "url": "https://www.vea.com.ar"},  
+        {"name": "Walmart", "url": "https://www.walmart.com/browse/argentina"} 
     ]
