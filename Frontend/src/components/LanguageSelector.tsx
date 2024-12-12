@@ -14,12 +14,13 @@ const LanguageSelector: React.FC = () => {
   const { i18n } = useTranslation();
 
   return (
-    <div className="w-40">
+    <div className="w-40 flex items-center space-x-2">
+      <Languages className="w-5 h-5 text-gray-300" />
       <Select
         value={languages.find(l => l.value === i18n.language)}
         onChange={(option) => option && i18n.changeLanguage(option.value)}
         options={languages}
-        className="react-select-container"
+        className="react-select-container flex-grow"
         classNamePrefix="react-select"
         theme={(theme) => ({
           ...theme,

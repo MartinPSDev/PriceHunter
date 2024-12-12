@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Settings, ShoppingCart, Search } from 'lucide-react';
 import CountrySelector from './components/CountrySelector';
 import StoreSelector from './components/StoreSelector';

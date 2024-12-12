@@ -12,6 +12,7 @@ const categories = [
   { value: 'toys', label: 'Toys & Games' },
   { value: 'books', label: 'Books' },
   { value: 'automotive', label: 'Automotive' },
+  { value: 'almacen', label: 'Almacén' }
 ];
 
 interface CategorySelectorProps {

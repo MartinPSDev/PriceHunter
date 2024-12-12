@@ -2,6 +2,7 @@ import asyncio
 from typing import List, Dict
 import pandas as pd
 from ..scrapers import MercadoLibreScraper
+from ..scrapers import scrape_store
 from fastapi import HTTPException
 import json
 
