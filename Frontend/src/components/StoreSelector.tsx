@@ -25,8 +25,37 @@ const storesByCountry: Record<string, Array<{ value: string; label: string }>> =
     { value: 'vea', label: 'Vea' }, 
     { value: 'walmart', label: 'Walmart' }, 
   ],
-  
+  uy: [
+    { value: 'geant', label: 'Géant' },
+    { value: 'disco', label: 'Disco' },
+    { value: 'ta-ta', label: 'Ta-Ta' },
+    { value: 'garbarino', label: 'Garbarino' },
+    { value: 'casa-bueno', label: 'Casa Bueno' },
+  ],
+  cl: [
+    { value: 'jumbo', label: 'Jumbo' },
+    { value: 'lider', label: 'Líder' },
+    { value: 'falabella', label: 'Falabella' },
+    { value: 'paris', label: 'Paris' },
+    { value: 'santa-isabel', label: 'Santa Isabel' },
+  ],
+  mx: [
+    { value: 'walmart', label: 'Walmart' },
+    { value: 'soriana', label: 'Soriana' },
+    { value: 'elektra', label: 'Elektra' },
+    { value: 'liverpool', label: 'Liverpool' },
+    { value: 'chedraui', label: 'Chedraui' },
+  ],
+  es: [
+    { value: 'carrefour', label: 'Carrefour' },
+    { value: 'mercadona', label: 'Mercadona' },
+    { value: 'media-markt', label: 'Media Markt' },
+    { value: 'el-corte-ingles', label: 'El Corte Inglés' },
+    { value: 'worten', label: 'Worten' },
+  ],
 };
+  
+
 
 interface StoreSelectorProps {
   country: string;
