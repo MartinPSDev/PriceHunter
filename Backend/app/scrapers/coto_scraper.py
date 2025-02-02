@@ -1,5 +1,5 @@
 from .base_scraper import BaseScraper
-from typing import List, Dict
+from typing import List, Dict, Any
 from bs4 import BeautifulSoup
 import re
 
@@ -7,7 +7,7 @@ class CotoScraper(BaseScraper):
     def __init__(self):
         super().__init__("Coto", "https://www.coto.com.ar")
 
-    async def search_products(self, query: str) -> List<Dict]:
+    async def search_products(self, query: str) -> List[Dict[str, Any]]:
         search_url = f"{self.base_url}/search?q={query}"
         content = await self.get_page_content(search_url)
         soup = BeautifulSoup(content, 'html.parser')
