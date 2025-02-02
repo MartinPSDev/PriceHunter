@@ -1,24 +1,25 @@
 import asyncio
 from typing import List, Dict
 import pandas as pd
-from ..scrapers import MercadoLibreScraper
-from ..scrapers import scrape_store
+from ..scrapers import MercadoLibreScraper, CotoScraper, scrape_store
 from fastapi import HTTPException
-import json
 
 class ScrapingService:
     def __init__(self):
         self.scrapers = {
             'mercadolibre': MercadoLibreScraper(),
-            # scrapers here later
+            'coto': CotoScraper(),
+            # Agrega más scrapers aquí si es necesario
         }
 
     async def scrape_all_stores(self, query: str, stores: List[str]) -> List[Dict]:
         tasks = []
         for store in stores:
-            if store in self.scrapers:
-                scraper = self.scrapers[store]
+            scraper = self.scrapers.get(store)
+            if scraper:
                 tasks.append(scrape_store(scraper, query))
+            else:
+                raise HTTPException(status_code=404, detail=f"Scraper for store '{store}' not found")
         
         results = await asyncio.gather(*tasks)
         return [item for sublist in results for item in sublist]

@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, BackgroundTasks
+from fastapi import APIRouter, HTTPException
 from typing import List
 from ..services.scraping_service import ScrapingService
 from pydantic import BaseModel
