@@ -36,4 +36,16 @@ class MercadoLibreScraper(BaseScraper):
 
     def extract_price(self, item) -> float:
         price_elem = item.select_one('.price-tag-fraction')
-        return float(re.sub(r'[^\d.]', '', price_elem.text)) if price_elem else 0.0
+        if not price_elem:
+            return 0.0
+        try:
+            # Eliminar caracteres no numéricos excepto el punto decimal
+            price_text = re.sub(r'[^\d.]', '', price_elem.text)
+            # Si hay múltiples puntos, mantener solo el último (formato argentino)
+            if price_text.count('.') > 1:
+                parts = price_text.split('.')
+                price_text = ''.join(parts[:-1]) + '.' + parts[-1]
+            return float(price_text) if price_text else 0.0
+        except Exception as e:
+            print(f"Error al extraer precio: {str(e)}")
+            return 0.0

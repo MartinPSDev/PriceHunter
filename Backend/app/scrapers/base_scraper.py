@@ -30,8 +30,18 @@ class BaseScraper(ABC):
     async def get_page_content(self, url: str) -> str:
         await self.init_session()
         try:
-            async with self.session.get(url) as response:
-                return await response.text()
+            async with self.session.get(url, timeout=30) as response:
+                if response.status == 200:
+                    return await response.text()
+                else:
+                    print(f"Error en la respuesta HTTP: {url} - Código de estado: {response.status}")
+                    return ""
+        except asyncio.TimeoutError:
+            print(f"Tiempo de espera agotado al acceder a {url}")
+            return ""
+        except aiohttp.ClientConnectorError as e:
+            print(f"Error de conexión al acceder a {url}: {str(e)}")
+            return ""
         except Exception as e:
-            print(f"Error fetching {url}: {str(e)}")
+            print(f"Error desconocido al acceder a {url}: {str(e)}")
             return ""
