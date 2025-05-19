@@ -5,7 +5,7 @@ import re
 
 class CotoScraper(BaseScraper):
     def __init__(self):
-        super().__init__("Coto", "https://www.coto.com.ar")
+        super().__init__("Coto", "https://www.cotodigital.com.ar/")
 
     async def search_products(self, query: str) -> List[Dict[str, Any]]:
         search_url = f"{self.base_url}/search?q={query}"
