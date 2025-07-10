@@ -29,6 +29,7 @@ const CountrySelector: React.FC<CountrySelectorProps> = ({ value, onChange }) =>
         value={countries.find(c => c.value === value)}
         onChange={(option) => onChange(option?.value || '')}
         options={countries}
+        placeholder={t('selectCountry')}
         className="react-select-container"
         classNamePrefix="react-select"
         theme={(theme) => ({

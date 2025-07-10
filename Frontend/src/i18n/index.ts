@@ -16,6 +16,14 @@ const resources = {
       priceComparisonDesc: 'Intelligent product matching based on specifications',
       multiFormat: 'Multiple Export Formats',
       multiFormatDesc: 'Export data in various formats including PDF, Excel, and more',
+      countries: {
+        us: "United States",
+        ar: "Argentina",
+        uy: "Uruguay",
+        cl: "Chile",
+        mx: "Mexico",
+        es: "Spain"
+      } 
     },
   },
   es: {
@@ -32,6 +40,14 @@ const resources = {
       priceComparisonDesc: 'Comparación inteligente basada en especificaciones',
       multiFormat: 'Múltiples Formatos',
       multiFormatDesc: 'Exporta datos en varios formatos incluyendo PDF, Excel y más',
+      countries: {
+        us: "Estados Unidos",
+        ar: "Argentina",
+        uy: "Uruguay",
+        cl: "Chile",
+        mx: "México",
+        es: "España"
+      }
     },
   },
   pt: {
@@ -48,6 +64,14 @@ const resources = {
       priceComparisonDesc: 'Comparação inteligente baseada em especificações',
       multiFormat: 'Múltiplos Formatos',
       multiFormatDesc: 'Exporte dados em vários formatos incluindo PDF, Excel e mais',
+      countries: {
+        us: "Estados Unidos",
+        ar: "Argentina",
+        uy: "Uruguai",
+        cl: "Chile",
+        mx: "México",
+        es: "Espanha"
+      }  
     },
   },
   fr: {
@@ -64,6 +88,14 @@ const resources = {
       priceComparisonDesc: 'Comparaison intelligente basée sur les spécifications',
       multiFormat: 'Formats Multiples',
       multiFormatDesc: 'Exportez les données dans différents formats dont PDF, Excel et plus',
+      countries: {
+        us: "États-Unis",
+        ar: "Argentine",
+        uy: "Uruguay",
+        cl: "Chili",
+        mx: "Mexique",
+        es: "Espagne"
+      }  
     },
   },
 };
