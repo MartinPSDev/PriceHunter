@@ -1,0 +1,11 @@
+{
+  "selectCountry": "Select country",
+  "countries": {
+    "us": "United States",
+    "ar": "Argentina",
+    "uy": "Uruguay",
+    "cl": "Chile",
+    "mx": "Mexico",
+    "es": "Spain"
+  }
+}

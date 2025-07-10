@@ -3,14 +3,7 @@ import Select from 'react-select';
 import { useTranslation } from 'react-i18next';
 import { Globe } from 'lucide-react';
 
-const countries = [
-  { value: 'us', label: 'United States' },
-  { value: 'ar', label: 'Argentina' },
-  { value: 'uy', label: 'Uruguay' },
-  { value: 'cl', label: 'Chile' },
-  { value: 'mx', label: 'Mexico' },
-  { value: 'es', label: 'Spain' }
-];
+const countryValues = ['us', 'ar', 'uy', 'cl', 'mx', 'es'];
 
 interface CountrySelectorProps {
   value: string;
@@ -19,6 +12,12 @@ interface CountrySelectorProps {
 
 const CountrySelector: React.FC<CountrySelectorProps> = ({ value, onChange }) => {
   const { t } = useTranslation();
+
+  // Genera las opciones traducidas cada vez que cambia el idioma
+  const countries = countryValues.map(code => ({
+    value: code,
+    label: t(`countries.${code}`),
+  }));
 
   return (
     <div className="space-y-2">
